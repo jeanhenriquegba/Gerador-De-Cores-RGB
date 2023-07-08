@@ -16,16 +16,15 @@ resultado = resultado +',';
 for(let i = 0; i < 1 ;i++){resultado += Math.floor(Math.random()*254);};
 resultado = resultado +')';
 
-
 corExibida.textContent = resultado;
 document.body.style.backgroundColor = resultado;
-
 cor.style.color = resultado;
 corGuardada = resultado;
 
 corHistory.innerHTML += 
 `<span style="background:${resultado};">${resultado}</span>`;
-
+let scrollar = document.querySelector(".historyContainer");
+    scrollar.scrollTop = scrollar.scrollHeight;
 });
 
 // Botão para copiar a cor
